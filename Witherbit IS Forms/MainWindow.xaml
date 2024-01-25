@@ -1,0 +1,36 @@
+﻿<Window x:Class="Witherbit_IS_Forms.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Witherbit_IS_Forms"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="#95141414" AllowsTransparency="True" WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#191919" x:Name="uiGridTab" MouseLeftButtonDown="uiGridTab_MouseLeftButtonDown" VerticalAlignment="Top" Grid.ColumnSpan="2">
+            <TextBlock FontFamily="Arial Black" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5 0">
+            <Run>
+                <Run.Foreground>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="2,0">
+                        <GradientStop Color="#49e8c2"/>
+                        <GradientStop Color="#dfdfdf" Offset="1"/>
+                    </LinearGradientBrush>
+                </Run.Foreground>Witherbit </Run>
+            <Run Foreground="#49e8c2">IS Forms</Run>
+            </TextBlock>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                <Grid Background="#191919" x:Name="uiGridButtonMinimize" Width="30" Height="20" PreviewMouseLeftButtonDown="UI_PreviewMouseLeftButtonUp" MouseEnter="UI_MouseEnter" MouseLeave="UI_MouseLeave">
+                    <Ellipse Fill="#49e8c2" Height="13" Width="13" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="ellipseMinimize"/>
+                </Grid>
+                <Grid Background="#191919" x:Name="uiGridButtonExit" Width="30" Height="20" PreviewMouseLeftButtonDown="UI_PreviewMouseLeftButtonUp" MouseEnter="UI_MouseEnter" MouseLeave="UI_MouseLeave">
+                    <Ellipse Fill="#ff5c83" Height="13" Width="13" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="ellipseClose"/>
+                </Grid>
+            </StackPanel>
+        </Grid>
+        <Frame x:Name="uiFrame" NavigationUIVisibility="Hidden" Grid.Row="1"/>
+    </Grid>
+</Window>
