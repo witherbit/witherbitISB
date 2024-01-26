@@ -2,22 +2,31 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using withersdk.ISB.Tests;
 
 namespace withersdk.ISB.Tables
 {
     public class SignificanceCoefficientTable
     {
         public double[,] Table { get; set; }
+        public List<Tester> Testers { get; set; }
+
+        public ITest Test { get; set; }
         public SignificanceCoefficientTable(EstimationController controller, int testIndex, string deparmentName)
         {
+            Testers = new List<Tester>();
             Table = new double[controller.Testers.Count + 1, controller.Testers[0].Departments.FirstOrDefault(x => x.Name == deparmentName)[testIndex].Max];
+            Test = controller.Testers[0].Departments.FirstOrDefault(x => x.Name == deparmentName)[testIndex];
             int row = 0;
             foreach (var tester in controller.Testers)
             {
                 foreach (var department in tester.Departments)
                 {
                     if (department.Name == deparmentName)
+                    {
+                        Testers.Add(tester);
                         InsertRowToArray(row++, department[testIndex].CalculateSignificanceCoefficient());
+                    }
                 }
             }
             var general = new List<double>();

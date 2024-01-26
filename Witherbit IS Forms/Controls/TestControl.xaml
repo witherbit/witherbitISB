@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="Witherbit_IS_Forms.Controls.TestControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Witherbit_IS_Forms.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="uiName" Grid.Row="0" Foreground="#49e8c2" Text="" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black" FontSize="15"/>
+        <StackPanel x:Name="uiPanel" Grid.Row="1"> 
+
+        </StackPanel>
+    </Grid>
+</UserControl>

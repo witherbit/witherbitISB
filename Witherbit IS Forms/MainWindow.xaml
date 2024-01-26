@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Witherbit_IS_Forms"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="#95141414" AllowsTransparency="True" WindowStyle="None">
+        Title="MainWindow" Height="800" Width="1200" Background="#95141414" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>

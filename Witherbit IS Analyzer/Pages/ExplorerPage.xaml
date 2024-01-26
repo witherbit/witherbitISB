@@ -1,0 +1,29 @@
+﻿<Page x:Class="Witherbit_IS_Analyzer.Pages.ExplorerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Witherbit_IS_Analyzer.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ExplorerPage">
+
+    <Border Margin="10" Background="#90454545" CornerRadius="15">
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Выбор опросов" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontFamily="Arial Black" FontSize="15"/>
+            <Grid Background="#9049e8c2" Grid.Row="1" Margin="50 0 50 0"/>
+            <ScrollViewer Grid.Row="2" CanContentScroll="False" VerticalScrollBarVisibility="Visible">
+                <StackPanel x:Name="uiPanel">
+                </StackPanel>
+            </ScrollViewer>
+            <Button Grid.Row="4" Height="40" Background="#49e8c2" VerticalAlignment="Center" Width="300" HorizontalAlignment="Center" Foreground="#1f5c4d" Content="Анализировать" FontFamily="Arial Black" FontSize="15" Click="Button_Click"/>
+        </Grid>
+    </Border>
+</Page>

@@ -38,7 +38,7 @@ namespace withersdk.ISB.Tests
             Add("Определено ли неактивное время сотрудника, по истечении которого будет выполнено блокирование сеанса?");
         }
 
-        public void Add(string quest, double estimation = 0, int significanceCoefficient = 10)
+        public void Add(string quest, double estimation = 0.5, int significanceCoefficient = 10)
         {
             Questions.Add(new QuestContainer
             {

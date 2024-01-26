@@ -4,6 +4,7 @@ using System.Text;
 
 namespace withersdk.ISB.Tests
 {
+    [Serializable]
     public class QuestContainer
     {
         public string Quest { get; set; }

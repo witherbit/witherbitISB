@@ -37,7 +37,7 @@ namespace withersdk.ISB.Tests
             Add("Возложена ли обязанность по выполнению предписанных мер антивирусной защиты на каждого работника организации, имеющего доступ к ЭВМ, а ответственность за выполнение требований по антивирусной защите - на руководителей функциональных подразделений организации?");
         }
 
-        public void Add(string quest, double estimation = 0, int significanceCoefficient = 10)
+        public void Add(string quest, double estimation = 0.5, int significanceCoefficient = 10)
         {
             Questions.Add(new QuestContainer
             {

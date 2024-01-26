@@ -26,9 +26,9 @@
                             <ColumnDefinition Width="4" />
                             <ColumnDefinition Width="4" />
                         </Grid.ColumnDefinitions>
-                        <Ellipse Grid.Column="0" Grid.ColumnSpan="2" Fill="#49e8c2" />
+                        <Rectangle Grid.Column="0" Grid.ColumnSpan="2" Fill="#49e8c2" />
                         <Rectangle Grid.Column="1" Grid.ColumnSpan="3" Fill="#49e8c2" />
-                        <Ellipse Grid.Column="3" Grid.ColumnSpan="2" Fill="#49e8c2" />
+                        <Rectangle Grid.Column="3" Grid.ColumnSpan="2" Fill="#49e8c2" />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
@@ -46,9 +46,9 @@
                             <RowDefinition Height="4" />
                             <RowDefinition Height="4" />
                         </Grid.RowDefinitions>
-                        <Ellipse Grid.Row="0" Grid.RowSpan="2" Fill="#49e8c2" />
+                        <Rectangle Grid.Row="0" Grid.RowSpan="2" Fill="#49e8c2" />
                         <Rectangle Grid.Row="1" Grid.RowSpan="3" Fill="#49e8c2" />
-                        <Ellipse Grid.Row="3" Grid.RowSpan="2" Fill="#49e8c2" />
+                        <Rectangle Grid.Row="3" Grid.RowSpan="2" Fill="#49e8c2" />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>

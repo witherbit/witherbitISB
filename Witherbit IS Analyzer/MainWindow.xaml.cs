@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using withersdk.Ui;
+using withersdk.ISB;
+using Witherbit_IS_Analyzer.Pages;
 
 namespace Witherbit_IS_Analyzer
 {
@@ -21,10 +23,20 @@ namespace Witherbit_IS_Analyzer
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static EstimationController Controller { get; set; }
+        public static MainWindow Instance { get; private set; }
         public MainWindow()
         {
             InitializeComponent();
+            Instance = this;
             StateChanged += StateChange;
+            SetPage(new ExplorerPage());
+        }
+        internal static Page SetPage(Page page)
+        {
+            var result = Instance.uiFrame.Content as Page;
+            Instance.uiFrame.Content = page;
+            return result;
         }
         // Верхний бар (открыть, закрыть, перетаскивать окно)
         #region TopBar                                                  

@@ -1,0 +1,168 @@
+﻿<UserControl x:Class="Witherbit_IS_Analyzer.Controls.EstimationChartsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Witherbit_IS_Analyzer.Controls"
+             xmlns:lc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="uiDepartment" Text="Department" Grid.ColumnSpan="2" Foreground="#49e8c2" FontFamily="Arial Black" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <Border Background="#806c6c6c" CornerRadius="15" Margin="5" Grid.Column="0" Grid.Row="1">
+            <lc:CartesianChart Height="100" Margin="10 0" Hoverable="True" x:Name="uiAccessControlTest">
+                <lc:CartesianChart.AxisX>
+                    <lc:Axis Title="П1: управление доступом и регистрации" MaxValue="12" MinValue="0" FontFamily="Arial" ShowLabels="False" Foreground="#dfdfdf"/>
+                </lc:CartesianChart.AxisX>
+
+                <lc:CartesianChart.AxisY>
+                    <lc:Axis Title="" MaxValue="1" MinValue="0" FontFamily="Arial Black" Foreground="#dfdfdf"/>
+                </lc:CartesianChart.AxisY>
+
+            </lc:CartesianChart>
+        </Border>
+        <Border Background="#806c6c6c" CornerRadius="15" Margin="5" Grid.Column="1" Grid.Row="1">
+            <lc:CartesianChart Height="100" Margin="10 0" Hoverable="True" x:Name="uiAntivirus">
+                <lc:CartesianChart.AxisX>
+                    <lc:Axis Title="П2: средства антивирусной защиты" MaxValue="11" MinValue="0" FontFamily="Arial" ShowLabels="False" Foreground="#dfdfdf"/>
+                </lc:CartesianChart.AxisX>
+
+                <lc:CartesianChart.AxisY>
+                    <lc:Axis Title="" MaxValue="1" MinValue="0" FontFamily="Arial Black" Foreground="#dfdfdf"/>
+                </lc:CartesianChart.AxisY>
+
+            </lc:CartesianChart>
+        </Border>
+        <Border Background="#806c6c6c" CornerRadius="15" Margin="5" Grid.Column="0" Grid.Row="2">
+            <lc:CartesianChart Height="100" Margin="10 0" Hoverable="True" x:Name="uiRemoteWork">
+                <lc:CartesianChart.AxisX>
+                    <lc:Axis Title="П3: дистанционный режим работы" MaxValue="12" MinValue="0" FontFamily="Arial" ShowLabels="False" Foreground="#dfdfdf"/>
+                </lc:CartesianChart.AxisX>
+
+                <lc:CartesianChart.AxisY>
+                    <lc:Axis Title="" MaxValue="1" MinValue="0" FontFamily="Arial Black" Foreground="#dfdfdf"/>
+                </lc:CartesianChart.AxisY>
+
+            </lc:CartesianChart>
+        </Border>
+        <Border Background="#806c6c6c" CornerRadius="15" Margin="5" Grid.Column="1" Grid.Row="2">
+            <lc:CartesianChart Height="100" Margin="10 0" Hoverable="True" x:Name="uiII">
+                <lc:CartesianChart.AxisX>
+                    <lc:Axis Title="П4: информационная инфраструктура" MaxValue="9" MinValue="0" FontFamily="Arial" ShowLabels="False" Foreground="#dfdfdf"/>
+                </lc:CartesianChart.AxisX>
+
+                <lc:CartesianChart.AxisY>
+                    <lc:Axis Title="" MaxValue="1" MinValue="0" FontFamily="Arial Black" Foreground="#dfdfdf"/>
+                </lc:CartesianChart.AxisY>
+
+            </lc:CartesianChart>
+        </Border>
+        <Border Background="#806c6c6c" CornerRadius="15" Margin="5" Grid.Column="0" Grid.Row="3">
+            <lc:CartesianChart Height="100" Margin="10 0" Hoverable="True" x:Name="uiP1">
+                <lc:CartesianChart.AxisX>
+                    <lc:Axis Title="Значимость П1" FontFamily="Arial" ShowLabels="False" Foreground="#dfdfdf"/>
+                </lc:CartesianChart.AxisX>
+
+                <lc:CartesianChart.AxisY>
+                    <lc:Axis Title="" MaxValue="10" MinValue="0" FontFamily="Arial Black" Foreground="#dfdfdf"/>
+                </lc:CartesianChart.AxisY>
+
+            </lc:CartesianChart>
+        </Border>
+        <Border Background="#806c6c6c" CornerRadius="15" Margin="5" Grid.Column="1" Grid.Row="3">
+            <lc:CartesianChart Height="100" Margin="10 0" Hoverable="True" x:Name="uiP2">
+                <lc:CartesianChart.AxisX>
+                    <lc:Axis Title="Значимость П2" FontFamily="Arial" ShowLabels="False" Foreground="#dfdfdf"/>
+                </lc:CartesianChart.AxisX>
+
+                <lc:CartesianChart.AxisY>
+                    <lc:Axis Title="" MaxValue="10" MinValue="0" FontFamily="Arial Black" Foreground="#dfdfdf"/>
+                </lc:CartesianChart.AxisY>
+
+            </lc:CartesianChart>
+        </Border>
+        <Border Background="#806c6c6c" CornerRadius="15" Margin="5" Grid.Column="0" Grid.Row="4">
+            <lc:CartesianChart Height="100" Margin="10 0" Hoverable="True" x:Name="uiP3">
+                <lc:CartesianChart.AxisX>
+                    <lc:Axis Title="Значимость П3" FontFamily="Arial" ShowLabels="False" Foreground="#dfdfdf"/>
+                </lc:CartesianChart.AxisX>
+
+                <lc:CartesianChart.AxisY>
+                    <lc:Axis Title="" MaxValue="10" MinValue="0" FontFamily="Arial Black" Foreground="#dfdfdf"/>
+                </lc:CartesianChart.AxisY>
+
+            </lc:CartesianChart>
+        </Border>
+        <Border Background="#806c6c6c" CornerRadius="15" Margin="5" Grid.Column="1" Grid.Row="4">
+            <lc:CartesianChart Height="100" Margin="10 0" Hoverable="True" x:Name="uiP4">
+                <lc:CartesianChart.AxisX>
+                    <lc:Axis Title="Значимость П4" FontFamily="Arial" ShowLabels="False" Foreground="#dfdfdf"/>
+                </lc:CartesianChart.AxisX>
+
+                <lc:CartesianChart.AxisY>
+                    <lc:Axis Title="" MaxValue="10" MinValue="0" FontFamily="Arial Black" Foreground="#dfdfdf"/>
+                </lc:CartesianChart.AxisY>
+
+            </lc:CartesianChart>
+        </Border>
+        <Border Background="#806c6c6c" CornerRadius="15" Margin="5" Grid.Column="0" Grid.Row="5">
+            <lc:CartesianChart Height="100" Margin="10 0" Hoverable="True" x:Name="uiAll">
+                <lc:CartesianChart.AxisX>
+                    <lc:Axis Title="Оценки и общий коэффициент значимости" FontFamily="Arial" ShowLabels="False" Foreground="#dfdfdf"/>
+                </lc:CartesianChart.AxisX>
+
+                <lc:CartesianChart.AxisY>
+                    <lc:Axis Title="" MaxValue="1" MinValue="0" FontFamily="Arial Black" Foreground="#dfdfdf"/>
+                </lc:CartesianChart.AxisY>
+
+            </lc:CartesianChart>
+        </Border>
+        <Border Background="#806c6c6c" CornerRadius="15" Margin="5" Grid.Column="1" Grid.Row="5">
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Text="П1" FontFamily="Arial" FontSize="15"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Text="П2" FontFamily="Arial" FontSize="15"/>
+                <TextBlock Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Text="П3" FontFamily="Arial" FontSize="15"/>
+                <TextBlock Grid.Row="0" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Text="П4" FontFamily="Arial" FontSize="15"/>
+                <TextBlock Grid.Row="0" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Text="Итог" FontFamily="Arial" FontSize="15"/>
+
+                <TextBlock x:Name="uiLevel1" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Text="0" FontFamily="Arial" FontSize="15"/>
+                <TextBlock x:Name="uiLevel2" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Text="0" FontFamily="Arial" FontSize="15"/>
+                <TextBlock x:Name="uiLevel3" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Text="0" FontFamily="Arial" FontSize="15"/>
+                <TextBlock x:Name="uiLevel4" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Text="0" FontFamily="Arial" FontSize="15"/>
+                <TextBlock x:Name="uiLevel5" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Text="0" FontFamily="Arial" FontSize="15"/>
+
+                <TextBlock x:Name="uiValue1" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Text="0" FontFamily="Arial" FontSize="15"/>
+                <TextBlock x:Name="uiValue2" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Text="0" FontFamily="Arial" FontSize="15"/>
+                <TextBlock x:Name="uiValue3" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Text="0" FontFamily="Arial" FontSize="15"/>
+                <TextBlock x:Name="uiValue4" Grid.Row="2" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Text="0" FontFamily="Arial" FontSize="15"/>
+                <TextBlock x:Name="uiValue5" Grid.Row="2" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Text="0" FontFamily="Arial" FontSize="15"/>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

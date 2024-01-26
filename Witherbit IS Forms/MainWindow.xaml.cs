@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using withersdk.Ui;
+using withersdk.ISB;
+using Witherbit_IS_Forms.Pages;
 
 namespace Witherbit_IS_Forms
 {
@@ -21,9 +24,21 @@ namespace Witherbit_IS_Forms
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static Tester Tester { get; set; }
+        public static MainWindow Instance { get; private set; }
         public MainWindow()
         {
             InitializeComponent();
+            Instance = this;
+            StateChanged += StateChange;
+            SetPage(new AuthorizationPage());
+        }
+
+        internal static Page SetPage(Page page)
+        {
+            var result = Instance.uiFrame.Content as Page;
+            Instance.uiFrame.Content = page;
+            return result;
         }
         // Верхний бар (открыть, закрыть, перетаскивать окно)
         #region TopBar                                                  

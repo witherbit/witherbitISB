@@ -2,15 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using withersdk.ISB.Tests;
 
 namespace withersdk.ISB.Tables
 {
     public class EstimationTable
     {
         public double[,] Table { get; set; }
+        public Tester Tester { get; set; }
+        public ITest Test { get; set; }
         public EstimationTable(EstimationController controller, Tester tester, int testIndex, string departmentName)
         {
-            Table = new double[5, tester.Departments.FirstOrDefault(x => x.Name == departmentName)[testIndex].Max];
+            Tester = tester;
+            var itm = Tester.Departments.FirstOrDefault(x => x.Name == departmentName)[testIndex];
+            Table = new double[5, itm.Count];
             var scTable = new SignificanceCoefficientTable(controller, testIndex, departmentName);  //таблица коэффициентов значимости
             var est = new List<double>();   //частные показатель
             var sc = new List<double>();    //частные баллы значимости
@@ -18,16 +23,17 @@ namespace withersdk.ISB.Tables
             var tests = controller.GetTestsByTester(departmentName, tester);
             var d_est = tests[testIndex].CalculateEstimation(asc);  //оценка
             var d_sc = scTable.GetRow(controller.Testers.IndexOf(tester));  // частные коэфф. значимости
+            Test = tests[testIndex];
             foreach ( var question in tests[testIndex].Questions )
             {
                 est.Add(question.Estimation);
                 sc.Add(question.SignificanceCoefficient);
             }
-            InsertRowToArray(0, est.ToArray());
-            InsertRowToArray(1, sc.ToArray());
-            InsertRowToArray(2, d_sc);
-            InsertRowToArray(3, asc);
-            InsertRowToArray(4, new double[] { d_est });
+            InsertRowToArray(0, est.ToArray()); //частные показатель
+            InsertRowToArray(1, sc.ToArray());  //частные баллы значимости
+            InsertRowToArray(2, d_sc);          //частные коэфф. значимости
+            InsertRowToArray(3, asc);           //общие коэфф. значимости
+            InsertRowToArray(4, new double[] { d_est });    //оценка
         }
         private void InsertRowToArray(int row, double[] values)
         {

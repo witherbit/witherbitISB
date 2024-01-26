@@ -1,0 +1,22 @@
+﻿<Page x:Class="Witherbit_IS_Analyzer.Pages.AnalyzerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Witherbit_IS_Analyzer.Pages"
+      xmlns:control="clr-namespace:Witherbit_IS_Analyzer.Controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AnalyzerPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer CanContentScroll="False" VerticalScrollBarVisibility="Visible">
+            <StackPanel x:Name="uiTemp"/>
+        </ScrollViewer>
+        <Button Grid.Row="4" Height="40" Background="#49e8c2" VerticalAlignment="Center" Width="300" HorizontalAlignment="Center" Foreground="#1f5c4d" Content="Выход" FontFamily="Arial Black" FontSize="15" Click="Button_Click"/>
+    </Grid>
+</Page>

@@ -35,7 +35,7 @@ namespace withersdk.ISB.Tests
             Add("Осуществляется ли фиксация, регистрация и запись операций по изменению параметров настроек технических мер обеспечения ИБ и информационной инфраструктуры, предназначенных для размещения технических мер обеспечения ИБ?");
         }
 
-        public void Add(string quest, double estimation = 0, int significanceCoefficient = 10)
+        public void Add(string quest, double estimation = 0.5, int significanceCoefficient = 10)
         {
             Questions.Add(new QuestContainer
             {

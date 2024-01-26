@@ -39,7 +39,7 @@ namespace withersdk.ISB.Tests
             Add("Предоставляется ли доступ к данным о действиях и операциях только с целью выполнения служебных обязанностей?");
         }
 
-        public void Add(string quest, double estimation = 0, int significanceCoefficient = 5)
+        public void Add(string quest, double estimation = 0.5, int significanceCoefficient = 5)
         {
             Questions.Add(new QuestContainer
             {

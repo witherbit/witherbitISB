@@ -26,6 +26,20 @@ namespace withersdk.ISB
             return result;
         }
 
+        public List<EstimationTable> GetEstimationTables(string departmentName)
+        {
+            var result = new List<EstimationTable>();
+            foreach (var tester in Testers)
+            {
+                var testsCount = GetTestsCount(departmentName);
+                for (int i = 0; i < testsCount; i++)
+                {
+                    result.Add(new EstimationTable(this, tester, i, departmentName));
+                }
+            }
+            return result;
+        }
+
         public List<double[]> GetSignificanceCoefficients(string departmentName)
         {
             var result = new List<double[]>();
@@ -165,6 +179,20 @@ namespace withersdk.ISB
                         result.Add(Testers.IndexOf(tester));
                         break;
                     }
+                }
+            }
+            return result.ToArray();
+        }
+
+        public string[] GetDepartments()
+        {
+            List<string> result = new List<string>();
+            foreach(var tester in Testers)
+            {
+                foreach(var dep in tester.Departments)
+                {
+                    if(!result.Contains(dep.Name))
+                        result.Add(dep.Name);
                 }
             }
             return result.ToArray();

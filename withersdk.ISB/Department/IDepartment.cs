@@ -8,14 +8,14 @@ namespace withersdk.ISB.Department
     public interface IDepartment
     {
         string Name { get; }
-        List<ITest> Tests { get; }
-        ITest this[int index] { get; }
+        List<DefaultTest> Tests { get; }
+        DefaultTest this[int index] { get; }
         int Count { get; }
-        void Add(ITest test);
-        void Remove(ITest test);
+        void Add(DefaultTest test);
+        void Remove(DefaultTest test);
         void RemoveAt(int index);
         void Clear();
-        void Insert(int index, ITest test);
-        int IndexOf(ITest test);
+        void Insert(int index, DefaultTest test);
+        int IndexOf(DefaultTest test);
     }
 }

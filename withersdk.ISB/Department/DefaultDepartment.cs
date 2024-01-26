@@ -5,23 +5,24 @@ using withersdk.ISB.Tests;
 
 namespace withersdk.ISB.Department
 {
+    [Serializable]
     public class DefaultDepartment : IDepartment
     {
-        public ITest this[int index] => Tests[index];
+        public DefaultTest this[int index] => Tests[index];
 
         public string Name { get; set; }
 
-        public List<ITest> Tests { get; set; }
+        public List<DefaultTest> Tests { get; set; }
 
         public int Count => Tests.Count;
 
         public DefaultDepartment(string name)
         {
-            Tests = new List<ITest>();
+            Tests = new List<DefaultTest>();
             Name = name;
         }
 
-        public void Add(ITest test)
+        public void Add(DefaultTest test)
         {
             Tests.Add(test);
         }
@@ -31,12 +32,12 @@ namespace withersdk.ISB.Department
             Tests.Clear();
         }
 
-        public void Insert(int index, ITest test)
+        public void Insert(int index, DefaultTest test)
         {
             Tests.Insert(index, test);
         }
 
-        public void Remove(ITest test)
+        public void Remove(DefaultTest test)
         {
             Tests.Remove(test);
         }
@@ -46,7 +47,7 @@ namespace withersdk.ISB.Department
             Tests.RemoveAt(index);
         }
 
-        public int IndexOf(ITest test)
+        public int IndexOf(DefaultTest test)
         {
             return Tests.IndexOf(test);
         }
